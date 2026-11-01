@@ -1,0 +1,236 @@
+/* Estilos unificados y exclusivos para la gestión de usuarios */
+.admin-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    color: #f8fafc;
+}
+
+.admin-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 1rem;
+}
+
+.admin-header-flex h2 {
+    margin: 0;
+    color: #38bdf8;
+    font-size: 1.4rem;
+}
+
+.user-badge {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.35rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-badge span {
+    font-weight: bold;
+    color: #f8fafc;
+}
+
+.btn-volver {
+    text-align: center;
+    background-color: #1e293b;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background-color: #334155;
+}
+
+.btn-logout {
+    background-color: transparent;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Caja del formulario siempre fija y visible */
+.product-form-box-fixed {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: block !important;
+}
+
+.product-form-box-fixed h3 {
+    margin-top: 0;
+    color: #38bdf8;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    background: #1e293b;
+    border: 1px solid #475569;
+    color: white;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-accion-principal {
+    flex: 2;
+    padding: 0.75rem;
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-accion-principal:hover {
+    background-color: #16a34a;
+}
+
+.btn-modo-actualizar {
+    background-color: #0284c7 !important;
+}
+
+.btn-modo-actualizar:hover {
+    background-color: #0369a1 !important;
+}
+
+.btn-accion-cancelar {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #64748b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-accion-cancelar:hover {
+    background-color: #475569;
+}
+
+/* Tabla de usuarios */
+.inventory-table-container {
+    overflow-x: auto;
+    background: #0f172a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.inventory-table-container h3 {
+    color: #f8fafc;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.admin-table th, .admin-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #334155;
+    color: #f8fafc;
+}
+
+.admin-table th {
+    background-color: #1e293b;
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.admin-table tr:hover {
+    background-color: rgba(30, 41, 59, 0.5);
+}
+
+.btn-accion {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+    margin-right: 4px;
+}
+
+.btn-editar {
+    background-color: #0284c7;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #0369a1;
+}
+
+.btn-eliminar {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #dc2626;
+}
+
+#mensaje-user {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,299 @@
+/* --- ESTILOS DE LAS TARJETAS DE PRODUCTOS (Unificado con el diseño de Index) --- */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0 3rem 0;
+}
+
+/* Selector para cualquier tarjeta de producto basada en su código numérico */
+[class^="0"], [class^="1"], [class^="2"], [class^="3"], [class^="4"], [class^="5"] {
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 280px; /* Ancho fijo para mantener la consistencia en el diseño flexible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el precio/pie de la tarjeta al fondo absoluto */
+    align-items: center; /* Centra la imagen y contenido horizontalmente */
+    text-align: center;  /* Centra todo el texto dentro de la tarjeta */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+[class^="0"]:hover, [class^="1"]:hover, [class^="2"]:hover, [class^="3"]:hover, [class^="4"]:hover, [class^="5"]:hover {
+    transform: translateY(-5px);
+    border-color: #ef4444;
+}
+
+/* Estilos de los títulos asegurando una altura equitativa para nombres de 1 o 2 líneas */
+[class^="0"] h3, [class^="1"] h3, [class^="2"] h3, [class^="3"] h3, [class^="4"] h3, [class^="5"] h3 {
+    color: #f8fafc;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita el título a un máximo de 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.8rem; /* Otorga una altura fija exacta para que el título ocupe siempre el espacio de 2 líneas */
+    line-height: 1.4rem;
+}
+
+[class^="0"] img, [class^="1"] img, [class^="2"] img, [class^="3"] img, [class^="4"] img, [class^="5"] img {
+    width: 100%;
+    height: 180px;
+    background-color: transparent; /* Elimina el fondo negro/oscuro que actuaba como marco */
+    object-fit: contain;
+    border-radius: 8px; /* Agrega esquinas redondeadas a la imagen */
+    padding: 0; /* Elimina el relleno interno para aprovechar el espacio */
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+[class^="0"] p, [class^="1"] p, [class^="2"] p, [class^="3"] p, [class^="4"] p, [class^="5"] p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Etiqueta de precio adaptada al estilo de los botones/etiquetas principales */
+.precio {
+    align-self: center;
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* --- ESTILOS DE LA CUADRÍCULA DE CATEGORÍAS (Para catalogo.html) --- */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0 3rem 0;
+}
+
+.categoria-card {
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+    border-color: #ef4444;
+}
+
+.categoria-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    background-color: transparent; /* Elimina el fondo negro/oscuro */
+    border-radius: 8px; /* Agrega esquinas redondeadas */
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.categoria-card h2 {
+    color: #f8fafc;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.categoria-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Encabezados de categorías y subcategorías generales */
+.category-title {
+    color: #f8fafc;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subcategory-title {
+    color: #ef4444; /* Cambiado a rojo corporativo de la paleta */
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.catalog-header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.catalog-header h1 {
+    color: #f8fafc;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.catalog-header p {
+    color: #94a3b8;
+}
+
+/* --- DISEÑO DE DOS COLUMNAS (Menú lateral + Productos) --- */
+.catalog-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+/* Estilos del menú lateral de subcategorías */
+.sidebar-subcategorias {
+    width: 260px;
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    position: sticky;
+    top: 2rem;
+    flex-shrink: 0;
+}
+
+.sidebar-subcategorias h3 {
+    color: #f8fafc;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.sidebar-subcategorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-subcategorias li {
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-subcategorias a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-subcategorias a:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+/* El contenido principal ocupa el resto del ancho */
+.catalog-content {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* --- DISEÑO RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 900px) {
+    .catalog-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar-subcategorias {
+        width: 100%;
+        position: static;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* --- ESTILOS AVANZADOS PARA EL MENÚ LATERAL --- */
+.sidebar-cat-group {
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-cat-link {
+    display: block;
+    background-color: #0b0f19;
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.35rem;
+    border: 1px solid #1e293b;
+    transition: all 0.3s ease;
+}
+
+.sidebar-cat-link:hover,
+.sidebar-cat-link.active {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.sidebar-sublist {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+    border-left: 2px solid #1e293b;
+}
+
+.sidebar-sublist li {
+    margin-bottom: 0.35rem;
+}
+
+.sidebar-sublist a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.sidebar-sublist a:hover {
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.agotado {
+    opacity: 0.4;
+    position: relative;
+    pointer-events: none;
+}
+
+.agotado::after {
+    content: "AGOTADO";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    background-color: #ef4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 10;
+}

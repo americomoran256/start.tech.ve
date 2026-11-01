@@ -1,0 +1,96 @@
+
+/* Estilos específicos para la sección de login y panel */
+.admin-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+.admin-container h2 {
+    color: #f8fafc;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.form-group {
+    margin-bottom: 1.25rem;
+}
+.form-group label {
+    display: block;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0b0f19;
+    border: 1px solid #1e293b;
+    border-radius: 0.35rem;
+    color: #f8fafc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #ef4444;
+}
+.btn-admin {
+    width: 100%;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.35rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-admin:hover {
+    background-color: #dc2626;
+}
+.error-msg {
+    color: #ef4444;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: none;
+}
+/* Estilos del panel interno (inicialmente oculto) */
+#dashboard-panel {
+    display: none;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+.dashboard-header h2 {
+    color: #f8fafc;
+    margin: 0;
+}
+.btn-logout {
+    background-color: transparent;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-logout:hover {
+    background-color: #ef4444;
+    color: white;
+}

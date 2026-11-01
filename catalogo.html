@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catálogo General</title>
+        <link rel="icon" type="image/png" href="picture/Logo V.png">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/catalogo.css">
+        <script src="script/estado.js"></script>
+    </head>
+    <body>
+        <div class="page-container">
+            <header>
+                <div class="banner-container">
+                    <img src="picture/banner01.png" alt="Start Tech VE Banner" class="banner-img">
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tutoriales.html">Tutoriales</a></li>
+                        <li class="dropdown">
+                            <a>Descargas ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="descargas-windows.html">Windows</a></li>
+                                <li><a href="descargas-linux.html">Linux</a></li>
+                                <li><a href="descargas-programas.html">Programas Básicos</a></li>
+                                <li><a href="descargas-diagnostico.html">Herramientas de Diagnóstico</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="donaciones.html">Donaciones</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="catalog-layout">
+                <aside class="sidebar-subcategorias" id="sidebar-container" style="display: none;">
+                </aside>
+                <div class="catalog-content">
+                    <section class="catalog-header">
+                        <h1 id="titulo-seccion">Catálogo General</h1>
+                        <p id="descripcion-seccion">Explora nuestras categorías y artículos disponibles con precios y especificaciones actualizadas.</p>
+                    </section>
+                    <section class="categorias-grid" id="categorias-grid">
+                        <a href="catalogo.html?cat=celular" class="categoria-card">
+                            <img src="picture/accesorios_telefonos.png" alt="Celulares">
+                            <h2>Celulares</h2>
+                            <p>Cargadores, cables, audífonos y accesorios.</p>
+                        </a>
+                        <a href="catalogo.html?cat=pc" class="categoria-card">
+                            <img src="picture/accesorio_pc.png" alt="Computadoras">
+                            <h2>Computadoras</h2>
+                            <p>Periféricos, almacenamiento, redes y adaptadores.</p>
+                        </a>
+                        <a href="catalogo.html?cat=electronica" class="categoria-card">
+                            <img src="picture/electronicos.png" alt="Electrónicos">
+                            <h2>Electrónicos</h2>
+                            <p>Smartwatch, parlantes, audio y streaming.</p>
+                        </a>
+                        <a href="catalogo.html?cat=vehiculo" class="categoria-card">
+                            <img src="picture/accesorio_vehiculo.png" alt="Vehículos">
+                            <h2>Vehículos</h2>
+                            <p>Accesorios para autos y motos.</p>
+                        </a>
+                        <a href="catalogo.html?cat=hogar" class="categoria-card">
+                            <img src="picture/hogar.png" alt="Hogar">
+                            <h2>Hogar</h2>
+                            <p>Herramientas, iluminación, belleza y seguridad.</p>
+                        </a>
+                    </section>
+                    <div id="contenedor-principal">
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Start Tech VE</h4>
+                        <p>Tecnología, servicio técnico y educación informática.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Enlaces </h4>
+                        <p><a href="catalogo.html">Catálogo</a> | <a href="contacto.html">Contáctanos</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Start Tech VE. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+        </div>
+        <script src="script/catalogo-dinamico.js"></script>
+    </body>
+</html>

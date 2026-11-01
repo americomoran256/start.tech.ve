@@ -1,0 +1,129 @@
+/* Estilos para la página de Contacto */
+.contact-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-header h1 {
+    font-size: 2.2rem;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem 3rem 1rem;
+}
+
+.contact-info-card, .map-card {
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-info-card h3, .map-card h3 {
+    color: #f8fafc;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.payment-list {
+    list-style: disc;
+    margin-left: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+.payment-list li {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.contact-actions {
+    margin-top: 1rem;
+}
+
+.btn-telegram {
+    display: inline-block;
+    background-color: #229ed9;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+
+.btn-telegram:hover {
+    opacity: 0.9;
+}
+
+/* Estilos del Mapa */
+.map-container {
+    width: 100%;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    margin-bottom: 1rem;
+}
+
+.map-note {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Estilos para los botones de redes sociales con logos */
+.social-links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: #1a2238;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: 1px solid #2a3456;
+}
+
+.social-btn:hover {
+    background-color: #2e3b68;
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}

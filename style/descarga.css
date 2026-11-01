@@ -1,0 +1,221 @@
+/* ==========================================
+   ESTILOS PARA LA SECCIÓN DE DESCARGAS
+   ========================================== */
+
+.downloads-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estilo de Fila / Item de la lista organizada */
+.download-row {
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.download-row:hover {
+    border-color: #ef4444;
+}
+
+/* Columna Izquierda: Logo y Título */
+.download-sidebar {
+    background-color: #0b0f19;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #1e293b;
+    overflow: hidden; /* Evita cualquier desborde visual */
+}
+
+.download-sidebar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    border-radius: 0.5rem; /* Esquinas redondeadas */
+}
+
+.download-sidebar h3 {
+    color: #f8fafc;
+    font-size: 1.25rem;
+}
+
+/* Columna Derecha: Información y Botones */
+.download-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.download-description p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Bloque de Detalles Técnicos (Requisitos y Soporte) */
+.download-specs {
+    background-color: rgba(11, 15, 25, 0.5);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #1e293b;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.specs-grid-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #1e293b;
+}
+
+.spec-item {
+    color: #64748b;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.spec-value {
+    color: #f8fafc;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Lista interna para los Requisitos */
+.requirements-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.requirements-title {
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.requirement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.requirement-list li {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.requirement-list li span {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+.status-ended {
+    color: #ef4444 !important;
+}
+
+.status-active {
+    color: #10b981 !important;
+}
+
+/* Botones de Descarga: Alineados al centro y con tamaño uniforme */
+.download-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Estilo unificado para todos los botones de descarga */
+.btn-download-x86,
+.btn-download-x64,
+.btn-download-official {
+    flex: 1 1 200px; /* Tamaño mínimo base para mantener consistencia */
+    max-width: 240px;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: opacity 0.3s, background-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-download-x86 {
+    background-color: #229ed9;
+    color: #fff;
+}
+
+.btn-download-x86:hover {
+    opacity: 0.9;
+}
+
+.btn-download-x64 {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+.btn-download-x64:hover {
+    background-color: #dc2626;
+}
+
+.btn-download-official {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+.btn-download-official:hover {
+    background-color: #2563eb;
+}
+
+/* Diseño Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .download-row {
+        grid-template-columns: 1fr;
+    }
+    .download-sidebar {
+        border-right: none;
+        border-bottom: 1px solid #1e293b;
+        padding: 1rem;
+    }
+    .btn-download-x86,
+    .btn-download-x64,
+    .btn-download-official {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}

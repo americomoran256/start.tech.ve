@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Tech VE | Gestión de Usuarios</title>
+    <link rel="icon" type="image/png" href="picture/Logo V.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/users.css">
+    <script src="script/guard.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="banner-container">
+                <img src="picture/banner01.png" alt="Start Tech VE Banner" class="banner-img">
+            </div>
+        </header>
+
+        <main>
+            <div class="admin-container">
+                <div class="admin-header-flex">
+                    <h2>Gestión de Usuarios</h2>
+                    <button id="btn-salir" class="btn-logout">Cerrar Sesión</button>
+                </div>
+
+                <div class="user-badge">
+                    Conectado como: <span id="usuario-actual">Administrador</span>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <a href="admin.html" class="btn-volver">⬅ Volver al Panel Central</a>
+                </div>
+
+                <!-- Formulario siempre fijo y visible (Estilo Categoria) -->
+                <div class="product-form-box-fixed" id="form-container">
+                    <h3 id="form-titulo">Agregar Nuevo Administrador</h3>
+                    <form id="form-user">
+                        <div class="form-group">
+                            <label for="input-usuario">Nombre de Usuario:</label>
+                            <input type="text" id="input-usuario" required placeholder="Ej: operador1">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password">Contraseña:</label>
+                            <input type="password" id="input-password" required placeholder="Introduce la contraseña (min. 8 caracteres)">
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" id="btn-guardar" class="btn-accion-principal">Guardar Administrador</button>
+                            <button type="button" id="btn-cancelar" class="btn-accion-cancelar" style="display: none;">Cancelar</button>
+                        </div>
+                    </form>
+                    <p id="mensaje-user"></p>
+                </div>
+
+                <!-- Tabla de Listado de Usuarios -->
+                <div class="inventory-table-container">
+                    <h3>Usuarios Registrados</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Contraseña</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-usuarios-body">
+                            <!-- Carga dinámica -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Start Tech VE. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const usuarioGuardado = sessionStorage.getItem("username_starttech");
+        if (usuarioGuardado) {
+            document.getElementById("usuario-actual").textContent = usuarioGuardado;
+        }
+
+        document.getElementById('btn-salir').addEventListener('click', function() {
+            sessionStorage.removeItem("auth_starttech");
+            sessionStorage.removeItem("username_starttech");
+            window.location.href = "system.html";
+        });
+    </script>
+    <script src="script/users-admin.js"></script>
+</body>
+</html>

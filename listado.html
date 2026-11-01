@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Tech VE | Administrador de Catálogo</title>
+    <link rel="icon" type="image/png" href="picture/Logo V.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/listado.css">
+    <script src="script/guard.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="banner-container">
+                <img src="picture/banner01.png" alt="Start Tech VE Banner" class="banner-img">
+            </div>
+        </header>
+
+        <main>
+            <div class="admin-container">
+                <div class="admin-header-flex">
+                    <h2>Administrador de Catálogo e Inventario</h2>
+                    <button id="btn-salir" class="btn-logout">Cerrar Sesión</button>
+                </div>
+
+                <div class="user-badge">
+                    Conectado como: <span id="usuario-actual">Administrador</span>
+                </div>
+
+                <!-- Botones de Acción Superiores -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <button id="btn-mostrar-form-prod" class="btn-nuevo-prod" style="flex: 2; margin-bottom: 0;">➕ Agregar Nuevo Producto</button>
+                    <a href="admin.html" class="btn-menu" style="flex: 1; text-align: center; background-color: #1e293b; border-color: #38bdf8; margin-top: 0; display: flex; align-items: center; justify-content: center; text-decoration: none;">⬅ Volver al Panel</a>
+                </div>
+
+                <!-- Formulario Completo Oculto -->
+                <div id="form-prod-container" class="product-form-box" style="display: none;">
+                    <h3 id="form-titulo">Registrar Nuevo Producto</h3>
+                    <form id="form-producto">
+                        <div class="form-group">
+                            <label for="input-id">Código / ID del Producto (Ej: 01010001):</label>
+                            <input type="text" id="input-id" required placeholder="Ej: 01010001">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-nombre">Nombre del Producto:</label>
+                            <input type="text" id="input-nombre" required placeholder="Ej: Cargador Apple 25W">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-precio">Precio ($):</label>
+                            <input type="text" id="input-precio" required placeholder="Ej: 10.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="select-categoria1">Categoría Principal (categoria1):</label>
+                            <select id="select-categoria1">
+                                <option value="celular">Celular</option>
+                                <option value="pc">Computadoras (PC)</option>
+                                <option value="electronica">Electrónica</option>
+                                <option value="vehiculo">Vehículos</option>
+                                <option value="hogar">Hogar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-categoria2">Segunda Categoría (categoria2 - Opcional):</label>
+                            <select id="select-categoria2">
+                                <option value="">Ninguna</option>
+                                <option value="celular">Celular</option>
+                                <option value="pc">Computadoras (PC)</option>
+                                <option value="electronica">Electrónica</option>
+                                <option value="vehiculo">Vehículos</option>
+                                <option value="hogar">Hogar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-subcategoria">Subcategoría (listasubcategoria):</label>
+                            <select id="select-subcategoria" required>
+                                <option value="">Seleccione una categoría primero</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; margin-top: 1.5rem;">
+                            <button type="submit" class="btn-accion btn-cambiar" style="flex: 1; padding: 0.75rem;">Guardar Producto</button>
+                            <button type="button" id="btn-cancelar-prod" class="btn-accion btn-eliminar-prod" style="flex: 1; padding: 0.75rem;">Cancelar</button>
+                        </div>
+                    </form>
+                    <p id="mensaje-prod" style="margin-top: 1rem; text-align: center; font-weight: bold;"></p>
+                </div>
+
+                <!-- Tabla de Listado de Inventario -->
+                <div class="inventory-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Categorías / Subcat</th>
+                                <th>Visibilidad</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-inventario-body">
+                            <!-- Carga dinámica -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Start Tech VE. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const usuarioGuardado = sessionStorage.getItem("username_starttech");
+        if (usuarioGuardado) {
+            document.getElementById("usuario-actual").textContent = usuarioGuardado;
+        }
+
+        document.getElementById('btn-salir').addEventListener('click', function() {
+            sessionStorage.removeItem("auth_starttech");
+            sessionStorage.removeItem("username_starttech");
+            window.location.href = "system.html";
+        });
+    </script>
+    <script src="script/listado-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Tech VE | Panel de Administración</title>
+    <link rel="icon" type="image/png" href="picture/Logo V.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/admin.css">
+    <script src="script/guard.js"></script>
+
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="banner-container">
+                <img src="picture/banner01.png" alt="Start Tech VE Banner" class="banner-img">
+            </div>
+        </header>
+
+        <main>
+            <div class="admin-container">
+                <div class="admin-header-flex">
+                    <h2>Panel Central Start Tech</h2>
+                    <button id="btn-salir" class="btn-logout">Cerrar Sesión</button>
+                </div>
+
+                <!-- Div dinámico que muestra el usuario logueado -->
+                <div class="user-badge">
+                    Conectado como: <span id="usuario-actual">Administrador</span>
+                </div>
+
+                <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.5rem;">
+                    Selecciona el módulo que deseas administrar:
+                </p>
+
+                <!-- Botones de navegación a los paneles -->
+                <div class="menu-grid">
+                    <a href="listado.html" class="btn-menu">📦 Administrador de Catálogo e Inventario</a>
+                    <a href="categoria.html" class="btn-menu">🏷️ Administrador de Subcategorías</a>
+                    <a href="user.html" class="btn-menu">👤 Gestión de Usuarios y Credenciales</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Start Tech VE. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mostrar el nombre del usuario logueado (si lo guardaste en sessionStorage al iniciar sesión)
+        const usuarioGuardado = sessionStorage.getItem("username_starttech");
+        if (usuarioGuardado) {
+            document.getElementById("usuario-actual").textContent = usuarioGuardado;
+        }
+
+        // Lógica del botón de cerrar sesión
+        document.getElementById('btn-salir').addEventListener('click', function() {
+            // Limpiamos todas las variables de sesión relacionadas
+            sessionStorage.removeItem("auth_starttech");
+            sessionStorage.removeItem("username_starttech");
+            // Redirigimos al login
+            window.location.href = "system.html";
+        });
+    </script>
+</body>
+</html>

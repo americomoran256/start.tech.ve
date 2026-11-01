@@ -1,0 +1,44 @@
+/* ==========================================
+   ESTILOS PARA LA CUADRICULA DE CATEGORIAS (INDEX DE PROGRAMAS)
+   ========================================== */
+
+.categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra automáticamente las tarjetas sobrantes en la última fila */
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1rem 3rem 1rem;
+}
+
+.category-card {
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: center;
+    width: 300px; /* Ancho fijo ideal para que entren exactamente 3 por fila y se centren perfecto */
+    flex-grow: 0;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #ef4444;
+}
+
+.category-card h3 {
+    color: #f8fafc;
+    font-size: 1.25rem;
+}
+
+.category-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}

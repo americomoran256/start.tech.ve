@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel de Administración</title>
+        <link rel="icon" type="image/png" href="picture/Logo V.png">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/login.css">
+        <link rel="stylesheet" href="style/subcategoria.css">
+        <script src="script/login.js"></script>
+    </head>
+    <body>
+        <div class="page-container">
+            <header>
+                <div class="banner-container">
+                    <img src="picture/banner01.png" alt="Start Tech VE Banner" class="banner-img">
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tutoriales.html">Tutoriales</a></li>
+                        <li class="dropdown">
+                            <a>Descargas ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="descargas-windows.html">Windows</a></li>
+                                <li><a href="descargas-linux.html">Linux</a></li>
+                                <li><a href="descargas-programas.html">Programas Básicos</a></li>
+                                <li><a href="descargas-diagnostico.html">Herramientas de Diagnóstico</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="donaciones.html">Donaciones</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div id="login-container" class="admin-container">
+                    <h2>Acceso Administrador</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" id="usuario" required placeholder="Ingresa tu usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password" required placeholder="Ingresa tu contraseña">
+                        </div>
+                        <button type="submit" class="btn-admin">Ingresar</button>
+                        <p id="error-login" class="error-msg">Usuario o contraseña incorrectos.</p>
+                    </form>
+                </div>
+                <div id="dashboard-panel">
+                    <div class="dashboard-header">
+                        <h2>Panel de Control - Inventario Start Tech</h2>
+                        <button id="btn-salir" class="btn-logout">Cerrar Sesión</button>
+                    </div>
+                    <div class="dashboard-content">
+                        <p style="color: #94a3b8;">Bienvenido al panel de administración. Aquí abajo integraremos las funciones para agregar, modificar o cambiar el estado de los productos de manera dinámica.</p>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Start Tech VE</h4>
+                        <p>Tecnología, servicio técnico y educación informática.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Enlaces </h4>
+                        <p><a href="catalogo.html">Catálogo</a> | <a href="contacto.html">Contáctanos</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Start Tech VE. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

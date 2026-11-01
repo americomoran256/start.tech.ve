@@ -1,0 +1,62 @@
+/* ==========================================
+   ESTILOS PARA EL MENÚ LATERAL DE CATEGORÍAS
+   ========================================== */
+
+.category-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem 1rem;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+}
+
+/* Menú Lateral Izquierdo */
+.category-sidebar-nav {
+    background-color: #0b0f19;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+}
+
+.category-sidebar-nav h3 {
+    color: #f8fafc;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #1e293b;
+}
+
+.category-sidebar-nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
+    display: block;
+}
+
+.category-sidebar-nav a:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #f8fafc;
+}
+
+.category-sidebar-nav a.active-category {
+    background-color: #ef4444;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Diseño Responsive */
+@media (max-width: 850px) {
+    .category-layout {
+        grid-template-columns: 1fr;
+    }
+}

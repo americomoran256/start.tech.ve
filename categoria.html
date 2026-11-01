@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Tech VE | Administrador de Subcategorías</title>
+    <link rel="icon" type="image/png" href="picture/Logo V.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/categoria.css">
+    <script src="script/guard.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="banner-container">
+                <img src="picture/banner01.png" alt="Start Tech VE Banner" class="banner-img">
+            </div>
+        </header>
+
+        <main>
+            <div class="admin-container">
+                <div class="admin-header-flex">
+                    <h2>Gestión de Subcategorías</h2>
+                    <button id="btn-salir" class="btn-logout">Cerrar Sesión</button>
+                </div>
+
+                <div class="user-badge">
+                    Conectado como: <span id="usuario-actual">Administrador</span>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <a href="admin.html" class="btn-volver">⬅ Volver al Panel</a>
+                </div>
+
+                <!-- Formulario siempre fijo y visible -->
+                <div class="product-form-box-fixed">
+                    <h3 id="form-titulo">Registrar Nueva Subcategoría</h3>
+                    <form id="form-subcategoria">
+                        <input type="hidden" id="input-subcat-antigua">
+                        <div class="form-group">
+                            <label for="input-subcat-nombre">Nombre de la Subcategoría:</label>
+                            <input type="text" id="input-subcat-nombre" required placeholder="Ej: Cargador, Protector, etc.">
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" id="btn-guardar" class="btn-accion-principal">Guardar Nueva Subcategoría</button>
+                            <button type="button" id="btn-cancelar-edicion" class="btn-accion-cancelar" style="display: none;">Cancelar</button>
+                        </div>
+                    </form>
+                    <p id="mensaje-subcat"></p>
+                </div>
+
+                <!-- Tabla de subcategorías existentes -->
+                <div class="inventory-table-container">
+                    <h3>Subcategorías Registradas</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Subcategoría</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-subcat-body">
+                            <!-- Carga dinámica -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Start Tech VE. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const usuarioGuardado = sessionStorage.getItem("username_starttech");
+        if (usuarioGuardado) {
+            document.getElementById("usuario-actual").textContent = usuarioGuardado;
+        }
+
+        document.getElementById('btn-salir').addEventListener('click', function() {
+            sessionStorage.removeItem("auth_starttech");
+            sessionStorage.removeItem("username_starttech");
+            window.location.href = "system.html";
+        });
+    </script>
+    <script src="script/categoria-admin.js"></script>
+</body>
+</html>

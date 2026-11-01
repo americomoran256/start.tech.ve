@@ -1,0 +1,239 @@
+/* Estilos unificados y optimizados para la gestión del catálogo e inventario */
+.admin-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    color: #f8fafc;
+    box-sizing: border-box;
+}
+
+.admin-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 1rem;
+}
+
+.admin-header-flex h2 {
+    margin: 0;
+    color: #38bdf8;
+    font-size: 1.4rem;
+}
+
+.user-badge {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.35rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-badge span {
+    font-weight: bold;
+    color: #f8fafc;
+}
+
+.btn-menu {
+    display: block;
+    background-color: #0b0f19;
+    color: #f8fafc;
+    border: 1px solid #1e293b;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.35rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.btn-menu:hover {
+    background-color: #1e293b;
+    border-color: #38bdf8;
+}
+
+.btn-logout {
+    background-color: transparent;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+.inventory-table-container {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.admin-table th, .admin-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #1e293b;
+    color: #f8fafc;
+}
+
+.admin-table th {
+    background-color: #0b0f19;
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.admin-table tr:hover {
+    background-color: rgba(30, 41, 59, 0.5);
+}
+
+.btn-accion {
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+    margin-right: 0.25rem;
+}
+
+.btn-accion:hover {
+    opacity: 0.85;
+}
+
+.btn-cambiar {
+    background-color: #38bdf8;
+    color: #0b0f19;
+}
+
+.btn-eliminar-prod {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-nuevo-prod {
+    background-color: #22c55e;
+    color: white;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.35rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-nuevo-prod:hover {
+    background-color: #16a34a;
+}
+
+.product-form-box {
+    background-color: #0b0f19;
+    border: 1px solid #1e293b;
+    padding: 1.25rem;
+    border-radius: 0.35rem;
+    margin-bottom: 2rem;
+}
+
+.product-form-box h3 {
+    margin-top: 0;
+    color: #38bdf8;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.65rem;
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    color: #f8fafc;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+}
+
+.btn-oculto-toggle {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #475569;
+    transition: all 0.2s;
+}
+
+.oculto-no {
+    background-color: #f8fafc;
+    color: #0b0f19;
+    border-color: #f8fafc;
+}
+
+.oculto-si {
+    background-color: #334155;
+    color: #94a3b8;
+    border-color: #475569;
+}
+
+.btn-oculto-toggle:hover {
+    opacity: 0.85;
+}
+
+.btn-estado-toggle {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.estado-disponible {
+    background-color: #22c55e;
+    color: #ffffff;
+    border-color: #16a34a;
+}
+
+.estado-agotado {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #dc2626;
+}
+
+.btn-estado-toggle:hover {
+    opacity: 0.85;
+}
